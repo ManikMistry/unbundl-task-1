@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  #carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Set your desired max-width */
+    margin: auto;
+  }
+  
+  #image-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    min-width: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #prev-btn {
+    left: 10px;
+  }
+  
+  #next-btn {
+    right: 10px;
+  }
+  
+  .line{
+    width: 100%;
+    height: 2px;
+    background-color: grey;
+  }
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+.logo img{
+    padding-left: 14px;
+    padding-top: 13px;
+    height: 40px;
+}
+
+.three-line img{
+    padding-left: 14px;
+    padding-top: 13px;
+    height: 30px;
+}
+.cart-search img{
+    padding-top: 13px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    .header {
+        /* flex-direction: column; */
+        /* align-items: center; */
+        height: auto;
+    }
+
+    .logo img,
+    .three-line img,
+    .cart-search img {
+        padding: 10px 0;
+    }
+
+    .carousel-image {
+        height: 750px;
+        object-fit: fill;
+    }
+    .three-line img {
+        height: 25px;
+    }
+
+    .cart-search img {
+        height: 20px;
+    }
+
+    #prev-btn,
+    #next-btn {
+        font-size: 18px;
+    }
+}
